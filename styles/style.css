@@ -7,6 +7,7 @@
   --btn-hover-color: #188ce8;
   --primary-white-color: #ffffff;
   --gray-bg-color: #2f303a;
+  --radio-btn-bg-color: #f5f4fa;
 }
 
 /* Basic inherited properties */
@@ -158,13 +159,75 @@ ul {
 }
 
 /* Portfolio.html styles */
+.portfolio-section {
+  display: flex;
+  justify-content: center;
+}
 
-.portfolio-menu,
-.portfolio-items {
+.portfolio-menu {
+  color: var(--title-text-color);
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+
   display: flex;
 }
 
-.portfolio-items {
+.portfolio-menu,
+.portfolio-content-items {
+  display: flex;
+}
+
+.portfolio-radio-btn {
+  color: var(--title-text-color);
+  font-weight: 500;
+  margin-right: 8px;
+  height: 38px;
+}
+
+.portfolio-radio-btn input[type="radio"] {
+  display: none;
+}
+
+.portfolio-menu label {
+  display: inline-block;
+  cursor: pointer;
+  padding: 6px 22px;
+  background-color: var(--radio-btn-bg-color);
+  border-radius: 4px;
+}
+
+/* Checked */
+.portfolio-menu input[type="radio"]:checked + label {
+  background: var(--btn-hover-color);
+  color: var(--primary-white-color);
+}
+
+/* Hover */
+.portfolio-menu label:hover {
+  color: #666;
+}
+
+.portfolio-content-items {
+  width: 1170px;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portfolio-links {
+  text-decoration: none;
+}
+
+.portfolio-title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.portfolio-text {
+  color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.87;
 }
