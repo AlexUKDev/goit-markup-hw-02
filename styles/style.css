@@ -7,7 +7,7 @@
   --btn-hover-color: #188ce8;
   --primary-white-color: #ffffff;
   --gray-bg-color: #2f303a;
-  --radio-btn-bg-color: #f5f4fa;
+  --btn-bg-color: #f5f4fa;
 }
 
 /* Basic inherited properties */
@@ -18,7 +18,7 @@ body {
   font-style: normal;
   font-size: 14px;
   letter-spacing: 0.03em;
-  line-height: 1.2;
+  line-height: 1.142;
   color: var(--primary-text-color);
 }
 
@@ -54,10 +54,12 @@ ul {
 .nav-links {
   color: var(--title-text-color);
 }
-
+.current {
+  color: var(--accent-color);
+}
 /* Hover and focus styles for links*/
-.logo:hover,
-.logo:focus,
+/* .logo:hover,
+.logo:focus, */
 .nav-links:hover,
 .nav-links:focus,
 .contacts-links:hover,
@@ -83,12 +85,16 @@ ul {
 }
 /* Button styles */
 .btn {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -96,9 +102,7 @@ ul {
   width: 200px;
   height: 50px;
 
-  align-items: center;
   text-align: center;
-  padding: none;
 }
 .btn:hover {
   background-color: var(--btn-hover-color);
@@ -124,7 +128,8 @@ ul {
   color: var(--title-text-color);
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 1.142;
 }
 
 /* Team section styles */
@@ -132,7 +137,7 @@ ul {
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.18;
+  line-height: 1.187;
 }
 
 .team-text {
@@ -145,6 +150,11 @@ ul {
   height: fit-content;
   /* BG для видимости белого цвета */
   background-color: var(--gray-bg-color);
+}
+
+/* modifier class for foter logo color */
+.footer {
+  color: var(--primary-white-color);
 }
 
 .address {
@@ -160,59 +170,51 @@ ul {
 
 /* Portfolio.html styles */
 .portfolio-section {
-  display: flex;
-  justify-content: center;
+  width: 1170px;
 }
 
 .portfolio-menu {
   color: var(--title-text-color);
   font-size: 16px;
   line-height: 1.63;
-  text-align: center;
-
-  display: flex;
+  justify-content: center;
 }
 
 .portfolio-menu,
-.portfolio-content-items {
+.portfolio-content {
   display: flex;
 }
-
-.portfolio-radio-btn {
-  color: var(--title-text-color);
-  font-weight: 500;
-  margin-right: 8px;
-  height: 38px;
-}
-
-.portfolio-radio-btn input[type="radio"] {
-  display: none;
-}
-
-.portfolio-menu label {
-  display: inline-block;
-  cursor: pointer;
-  padding: 6px 22px;
-  background-color: var(--radio-btn-bg-color);
-  border-radius: 4px;
-}
-
-/* Checked */
-.portfolio-menu input[type="radio"]:checked + label {
-  background: var(--btn-hover-color);
-  color: var(--primary-white-color);
-}
-
-/* Hover */
-.portfolio-menu label:hover {
-  color: #666;
-}
-
-.portfolio-content-items {
+.portfolio-content {
   width: 1170px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.portfolio-content-items {
+  /* width: 370px; */
+}
+
+.filter-btn {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--btn-bg-color);
+  color: var(--title-text-color);
+
+  font-size: 16px;
+  text-align: center;
+  font-weight: 500;
+  padding: 6px 22px;
+  margin-right: 8px;
+
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 38px;
+}
+.filter-btn:hover,
+.active {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .portfolio-links {
