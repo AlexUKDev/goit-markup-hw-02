@@ -155,6 +155,7 @@ ul {
 /* modifier class for foter logo color */
 .footer {
   color: var(--primary-white-color);
+  opacity: 60%;
 }
 
 .address {
