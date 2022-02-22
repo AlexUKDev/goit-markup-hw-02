@@ -155,7 +155,6 @@ ul {
 /* modifier class for foter logo color */
 .footer {
   color: var(--primary-white-color);
-  opacity: 60%;
 }
 
 .address {
@@ -167,6 +166,7 @@ ul {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
+  opacity: 60%;
 }
 
 /* Portfolio.html styles */
